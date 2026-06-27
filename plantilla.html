@@ -1,0 +1,376 @@
+<html class="light" lang="es">
+
+<head></head>
+
+<body class="bg-background text-on-surface">
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CreatorSpace | Editorial Minimalism</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;600&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-container": "#646464",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "primary-fixed": "#ffd9e4",
+                        "on-primary-container": "#76485a",
+                        "secondary-container": "#e2e2e2",
+                        "primary-fixed-dim": "#f2b6cb",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#f4dce4",
+                        "on-tertiary-fixed": "#25181e",
+                        "background": "#fdfaf9",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "outline-variant": "#d4c2c6",
+                        "surface-tint": "#805062",
+                        "on-primary-fixed": "#330f1f",
+                        "secondary-fixed": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1c1c",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-fixed-variant": "#65394b",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#ddc6ce",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-container": "#625158",
+                        "tertiary-fixed-dim": "#d7c1c8",
+                        "secondary": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-surface-variant": "#504447",
+                        "primary": "#805062",
+                        "outline": "#827377",
+                        "tertiary": "#6b5a60",
+                        "inverse-primary": "#f2b6cb",
+                        "surface-bright": "#fdfaf9",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-fixed-variant": "#524249",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#f8bbd0",
+                        "surface-dim": "#dadada",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "surface": "#fdfaf9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0",
+                        "lg": "0",
+                        "xl": "0",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "32px",
+                        "base": "8px",
+                        "container-padding": "40px",
+                        "gutter": "32px",
+                        "stack-sm": "16px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfaf9;
+            color: #1a1c1c;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.01em;
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(24, 1fr);
+        }
+
+        .kerning-wide {
+            letter-spacing: 0.25em;
+        }
+
+        .line-clamp-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+    <!-- Editorial NavBar -->
+    <header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-on-surface/5">
+        <div class="flex justify-between items-center w-full px-container-padding max-w-[1600px] mx-auto h-24">
+            <div class="text-2xl font-display font-black tracking-tighter">CREATORSPACE</div>
+            <nav class="hidden lg:flex gap-12">
+                <a class="text-[11px] uppercase kerning-wide font-bold border-b border-on-surface"
+                    href="#inicio">Collection 01</a>
+                <a class="text-[11px] uppercase kerning-wide text-on-surface-variant hover:text-on-surface transition-colors"
+                    href="#servicios">Services</a>
+                <a class="text-[11px] uppercase kerning-wide text-on-surface-variant hover:text-on-surface transition-colors"
+                    href="#contenido">Editorial</a>
+                <a class="text-[11px] uppercase kerning-wide text-on-surface-variant hover:text-on-surface transition-colors"
+                    href="#contacto">Inquiry</a>
+            </nav>
+            <button
+                class="border border-on-surface px-8 py-3 text-[10px] uppercase kerning-wide hover:bg-on-surface hover:text-background transition-all duration-500">Contact</button>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section: Editorial Layout -->
+        <section
+            class="relative pt-48 pb-section-gap px-container-padding max-w-[1600px] mx-auto min-h-screen flex flex-col md:flex-row items-end gap-16"
+            id="inicio">
+            <div class="md:w-5/12 space-y-12 mb-20 z-10">
+                <span class="text-[10px] uppercase kerning-wide text-primary">Volume 04 / 2024</span>
+                <h1 class="text-7xl md:text-9xl leading-[0.9] font-display text-on-surface">Digital<br /><span
+                        class="italic font-normal pl-12 md:pl-24">Storyteller.</span></h1>
+                <p
+                    class="text-lg font-light text-on-secondary-container max-w-sm leading-relaxed border-l border-primary/20 pl-6">
+                    Transformando ideas abstractas en narrativas visuales de alto impacto. Creamos contenido que respira
+                    minimalismo y sofisticación editorial.
+                </p>
+                <div class="flex gap-8 pt-4">
+                    <button
+                        class="bg-on-surface text-background px-10 py-5 text-[11px] uppercase kerning-wide hover:opacity-90 transition-all">Explore
+                        Portfolio</button>
+                </div>
+            </div>
+            <div class="md:w-7/12 relative group overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-full border-[20px] border-background z-10 pointer-events-none">
+                </div>
+                <img class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[2000ms] ease-out"
+                    data-alt="A professional portrait of a digital creator"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpETec3Y4AGFH3JRWn0j9PVe8LgrKCc9JzTMIsUBNx3oT072_LlMZSIsvkq2lxUGj9ZTy_cW70BCvi-LfGkrWWoJjCTsUthReM6t5wVD3L_Cr54epbLKLMHn9JKNn4FOkeAqxvSWbA9VoiaLzYV30cjwTN9-_X7vrgA7UvJxg99gn_1w0lTVm21Xl_auTxjjJDBBEhOVddU-9eyDgCubVNBdhiWr3gVU-ChzrPkfi21dL7UMyQANRXhA" />
+                <div class="absolute -bottom-8 -left-8 text-[80px] font-display italic text-primary/10 select-none">
+                    Maison</div>
+            </div>
+        </section>
+        <!-- Exclusive Packages (Services) Section -->
+        <section class="py-section-gap bg-[#f5f0ee] px-container-padding" id="servicios">
+            <div class="max-w-[1600px] mx-auto">
+                <div class="mb-32 flex flex-col md:flex-row justify-between items-baseline gap-8">
+                    <div class="max-w-xl">
+                        <span class="text-[10px] uppercase kerning-wide text-primary mb-4 block">Our Offering</span>
+                        <h2 class="text-5xl md:text-6xl font-display">Exclusive Packages</h2>
+                    </div>
+                    <p class="text-on-secondary-container max-w-xs text-sm uppercase kerning-wide leading-loose">Curated
+                        services for the discerning creator seeking elevated digital presence.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 border-t border-on-surface/10">
+                    <!-- Package 1 -->
+                    <div
+                        class="p-12 md:p-16 border-b md:border-b-0 md:border-r border-on-surface/10 group hover:bg-background transition-colors duration-700">
+                        <span class="text-[10px] font-bold text-primary mb-12 block">01 / Motion</span>
+                        <h3
+                            class="text-3xl font-display mb-6 group-hover:italic group-hover:pl-4 transition-all duration-500">
+                            Producción de Video</h3>
+                        <p class="text-sm font-light text-on-secondary-container leading-relaxed mb-12">Dirección
+                            creativa y edición cinematográfica optimizada para plataformas digitales de alto impacto.
+                        </p>
+                        <a class="inline-block border-b border-on-surface pb-1 text-[10px] uppercase kerning-wide"
+                            href="#">Discover Detail</a>
+                    </div>
+                    <!-- Package 2 -->
+                    <div
+                        class="p-12 md:p-16 border-b md:border-b-0 md:border-r border-on-surface/10 group hover:bg-background transition-colors duration-700">
+                        <span class="text-[10px] font-bold text-primary mb-12 block">02 / Frame</span>
+                        <h3
+                            class="text-3xl font-display mb-6 group-hover:italic group-hover:pl-4 transition-all duration-500">
+                            Fotografía Editorial</h3>
+                        <p class="text-sm font-light text-on-secondary-container leading-relaxed mb-12">Sesiones
+                            conceptuales que capturan la esencia de marcas personales con una estética minimalista.</p>
+                        <a class="inline-block border-b border-on-surface pb-1 text-[10px] uppercase kerning-wide"
+                            href="#">Discover Detail</a>
+                    </div>
+                    <!-- Package 3 -->
+                    <div class="p-12 md:p-16 group hover:bg-background transition-colors duration-700">
+                        <span class="text-[10px] font-bold text-primary mb-12 block">03 / Vision</span>
+                        <h3
+                            class="text-3xl font-display mb-6 group-hover:italic group-hover:pl-4 transition-all duration-500">
+                            Estrategia Visual</h3>
+                        <p class="text-sm font-light text-on-secondary-container leading-relaxed mb-12">Consultoría
+                            estética integral para unificar tu presencia digital bajo una identidad premium.</p>
+                        <a class="inline-block border-b border-on-surface pb-1 text-[10px] uppercase kerning-wide"
+                            href="#">Discover Detail</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Editorial Portfolio Section -->
+        <section class="py-section-gap px-container-padding max-w-[1600px] mx-auto overflow-hidden" id="contenido">
+            <div class="flex flex-col md:flex-row gap-20 mb-32 items-center">
+                <div class="md:w-1/2">
+                    <img class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                        data-alt="Minimalist architectural photograph"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhxIVm-284TSBQgJiFS6mnvP0onfzbz-WUsHr0UGqfQRgAUHZlZZ4tDBm8rToA0xoM2ScMZ1EbPRsptLU1o-bbF1FqpJPeoxZPvReI57M4ZJ7aJS4BmPGvUDSojkw2VGmsg1_Wedxr7pl8XF0kBCaEG7NIP1tTTBECr2vWxQT2w8tgxvKwL-65RX3SA0LwzzuYX58wNfwocEl40fJy_C6g-nTeC2MbjQjJOHTWaY4qkppmB9I-RNHIVw" />
+                </div>
+                <div class="md:w-1/2 space-y-12">
+                    <span class="text-[10px] uppercase kerning-wide text-primary">Portfolio Selection</span>
+                    <h2 class="text-6xl md:text-7xl font-display leading-[1.1]">Contenido Reciente &amp;<br /><span
+                            class="italic font-normal">Visual Essays</span></h2>
+                    <p class="text-on-secondary-container max-w-sm leading-relaxed font-light">Una selección de
+                        proyectos donde la forma y la función se encuentran en el minimalismo digital, explorando la
+                        intersección del arte y el comercio.</p>
+                    <div class="pt-8">
+                        <button
+                            class="border border-on-surface px-12 py-5 text-[11px] uppercase kerning-wide hover:bg-on-surface hover:text-background transition-all">View
+                            Archive</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 gap-gutter items-center">
+                <div class="col-span-12 md:col-span-4 translate-y-12">
+                    <img class="w-full aspect-square object-cover" data-alt="Close-up shot of designer workspace"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb3BNLx3sWXX46O3JGG_Md-e93TMsplTThd4EtMRmlwzC-pC5ml5uP-bkCOyCwrMboTdOE1yBiDY_2V9aRSatq0jhBOT083OPV_5LTSBdIXWgymcSgsEdhr__HcgdENOusRcLBsEKfI7uEe1NvJ0D2sonDmb3TFjwcvsY0a1CX1HU0eh2bTZWJS5r4lGgoKzblT--V1dLT7xgVg8v0L4p3AglgryypawuF8VxpUKG7AmUQfL5PZzrQVg" />
+                </div>
+                <div class="col-span-12 md:col-span-8">
+                    <img class="w-full aspect-[21/9] object-cover"
+                        data-alt="Cinematic wide shot of a creative studio interior"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeVw4BPykbOyWP4OI3tlvGXszgT6TW8QF2YTInk8zaCQv3yFAfN0aMdJ4C9EvRaL3xFhJjxKy840cqrQMW4iF8n3-ScmMT5gdca0clefKM5tub2Kow7GP09ahfsaEQR42KuAtteENYlWotMXp1iSZvWZyPp8lHFf0trTIl1CAZAPomnB7AS4EaVkV3lUxLsDidjpASQeiDyurdW2wMBlo6Dns_PuWrMxU_kJ5pseY9Mc0cOuiXLF7Qpg" />
+                </div>
+                <div class="col-span-12 md:col-span-7 md:col-start-3 mt-12">
+                    <img class="w-full aspect-video object-cover" data-alt="Conceptual digital art piece"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3zFPNmv2qCY6A-kUinOte8SRYwOegm-Fry0tamWBYU-8Qpyx-tLMrgd6spT0j4lOjQt8pFsI8G_LYBrtCN-S0ig8FImWdBcOPUZTpHFWJ1loubZ6iLl6T1DY60tAB3cLW5fsvjrEGhrRwwfgUsRdo5iXqzLSTAWuLK0DkTWhvlndoNgmGSwVgd79xBBufIJbypbTKtdRnY9NHRUfKu8Kp2Kzh3KBavK_3DU6FCZ8AsBM2B3h_vt-F1A" />
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section class="py-section-gap bg-background border-y border-on-surface/5 px-container-padding">
+            <div class="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-24">
+                <div class="md:w-1/3">
+                    <h2 class="text-4xl font-display italic">Client Stories</h2>
+                    <div class="h-px bg-primary w-24 mt-8"></div>
+                </div>
+                <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div class="space-y-8">
+                        <p class="text-2xl font-display leading-relaxed">"Trabajar con CreatorSpace cambió completamente
+                            cómo mi audiencia percibe mi marca personal. El enfoque minimalista y la atención al detalle
+                            son excepcionales."</p>
+                        <div class="flex items-center gap-6">
+                            <img class="w-14 h-14 object-cover" data-alt="Portrait of Elena Rivas"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6V_6tyfYNOIXbd2QpENLfH3j0mdblhDPFgW6_MS_PfPwtaEz0iLkULPGtX7jNpuBqhwe2v29IKQ0w0m2Gn9OWuApV8KLkHtQlARnhjpqYATLKvoQ6-bn0RxQh27dKlmTwwsyqSoi_q9xLK7QyBeXPqrLzRrepQ-21pP_yFJjRckBlm3zhmhANO5t4gOqAfIDy3g9T7txWxbXDRxZmQmPPR2jV4AfCQIFxQ_Ko-B3_SpZSrG47IfOHPw" />
+                            <div>
+                                <p class="text-[10px] uppercase kerning-wide font-bold">Elena Rivas</p>
+                                <p class="text-[9px] uppercase tracking-widest text-on-secondary-container">CEO Bloom
+                                     Digital</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <p class="text-2xl font-display leading-relaxed">"La capacidad para transformar una idea simple
+                            en una pieza visual de nivel editorial es lo que los diferencia. Absolutamente recomendado
+                            para creadores premium."</p>
+                        <div class="flex items-center gap-6">
+                            <img class="w-14 h-14 object-cover" data-alt="Portrait of Marcus Thorne"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAke9nt5Jg-U6Kqnz6bRT8Ev8RvQhwQ0uouz2mC3cd7LGvpLpuaPWOSOAKP_VpB2L_MNVBYecCl7fvuCJtacke8ra75pcBzs1YO_6I6b1aYwnd3bADfcCRIKszNCdOhnE5IDz7hIMonKY7lVuBBCFkhaqRRFyFizSVH87v11TlRfIXWB0U6lOV5QhmLOg-Mc1ktXGCEDQoCgGATG2DCJeIZBuECeqmPRn6fYI5Dk1kKEhQ0wpiiqQO_dA" />
+                            <div>
+                                <p class="text-[10px] uppercase kerning-wide font-bold">Marcus Thorne</p>
+                                <p class="text-[9px] uppercase tracking-widest text-on-secondary-container">Director
+                                    Creativo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA Section -->
+        <section class="py-section-gap px-container-padding bg-primary-container/10 relative" id="contacto">
+            <div class="max-w-4xl mx-auto text-center space-y-12">
+                <span class="text-[11px] uppercase kerning-wide text-primary">Inquiry</span>
+                <h2 class="text-6xl md:text-8xl font-display leading-tight">¿Listo para elevar<br /><span
+                        class="italic font-normal">tu presencia?</span></h2>
+                <p class="text-base font-light text-on-surface-variant max-w-lg mx-auto leading-relaxed">
+                    Hablemos sobre tu próximo proyecto y cómo podemos darle ese toque sofisticado y moderno que tu
+                    contenido merece.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-8 pt-8">
+                    <button
+                        class="bg-on-surface text-background px-16 py-6 text-[11px] uppercase kerning-wide hover:opacity-90 transition-all">Empezar
+                        ahora</button>
+                    <button
+                        class="border border-on-surface text-on-surface px-16 py-6 text-[11px] uppercase kerning-wide hover:bg-on-surface hover:text-background transition-all">Saber
+                        más</button>
+                </div>
+            </div>
+            <!-- Abstract Decoration -->
+            <div class="absolute top-1/2 left-10 -translate-y-1/2 hidden lg:block">
+                <div class="line-clamp-vertical text-[10px] uppercase kerning-wide text-on-surface/20">ESTABLISHED
+                    TWENTY TWENTY FOUR</div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-24 border-t border-on-surface/5 bg-background">
+        <div
+            class="flex flex-col md:flex-row justify-between items-start px-container-padding max-w-[1600px] mx-auto gap-16">
+            <div class="space-y-6">
+                <div class="text-3xl font-display font-black">CREATORSPACE</div>
+                <p class="text-[10px] uppercase kerning-wide text-on-secondary-fixed-variant">A Digital Creation Studio.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-x-24 gap-y-4">
+                <a class="text-[10px] uppercase kerning-wide hover:italic transition-all" href="#">Instagram</a>
+                <a class="text-[10px] uppercase kerning-wide hover:italic transition-all" href="#">Vimeo</a>
+                <a class="text-[10px] uppercase kerning-wide hover:italic transition-all" href="#">Behance</a>
+                <a class="text-[10px] uppercase kerning-wide hover:italic transition-all" href="#">LinkedIn</a>
+            </div>
+            <div class="space-y-4 text-right md:ml-auto">
+                <div class="flex gap-8 justify-end">
+                    <a class="text-[10px] uppercase kerning-wide text-on-surface-variant hover:text-on-surface"
+                        href="#">Privacidad</a>
+                    <a class="text-[10px] uppercase kerning-wide text-on-surface-variant hover:text-on-surface"
+                        href="#">Términos</a>
+                </div>
+                <p class="text-[10px] uppercase kerning-wide text-on-secondary-fixed-variant">© 2024 Digital Creator.
+                    Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {})
+    </script>
+</body>
+
+</html>
