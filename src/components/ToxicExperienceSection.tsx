@@ -7,23 +7,23 @@ const TELEGRAM_URL = "https://t.me/+kGMlimodG3k1ZmFk";
 const SERVICES = [
   {
     num: '01',
-    icon: '🎭',
-    title: 'Dinámicas & Juego de Rol',
-    desc: 'Relaciones tóxicas, infidelidades simuladas, drama y caos. Dinámicas diseñadas para desestabilizarte mentalmente y mantenerte exactamente donde quiero.',
-    ctaText: 'Saber Más',
+    icon: '🧠',
+    title: 'Terapias',
+    desc: 'Sesiones de terapia para enfermos como tú. Shaming de adicciones, control mental y dependencia emocional administrada con precisión. Una sesión conmigo y empezamos a cortarlo.',
+    ctaText: 'Iniciar Sesión',
   },
   {
     num: '02',
-    icon: '🧠',
-    title: 'TGE · Terapias',
-    desc: 'Toxic Girlfriend Experience. Sesiones de terapia para enfermos como tú. Control mental, shaming de adicciones y dependencia emocional administrada con precisión.',
-    ctaText: 'Iniciar Sesión',
+    icon: '🐍',
+    title: 'Toxic Girlfriend Experience',
+    desc: 'Relaciones tóxicas, infidelidades simuladas, celos, drama y caos consentido. Fotos, audios y mensajes diseñados para desestabilizarte y mantenerte exactamente donde quiero.',
+    ctaText: 'Saber Más',
   },
   {
     num: '03',
     icon: '📸',
-    title: 'Blackmail & Control',
-    desc: 'Para los que necesitan algo más que promesas. Blackmail consensuado, financial domination y dinámicas de poder que van más allá de lo que te atreves a admitir.',
+    title: 'Blackmail',
+    desc: 'Para los que necesitan algo más que promesas. Blackmail consensuado y dinámicas de poder que van más allá de lo que te atreves a admitir. Sin vuelta atrás.',
     ctaText: 'Preguntar',
   },
 ];
@@ -52,8 +52,8 @@ export const ToxicExperienceSection: React.FC<{ data: LolaProfileData }> = (_pro
               </span>
             </div>
             <h2 className="text-5xl md:text-7xl font-display text-white tracking-tight leading-[0.9]">
-              Toxic Girlfriend<br />
-              <span className="italic text-neon-pink glow-pink font-normal">Experience.</span>
+              Dinámicas<br />
+              <span className="italic text-neon-pink glow-pink font-normal">& Control.</span>
             </h2>
           </div>
           <div className="max-w-sm border-l-2 border-neon-pink/30 pl-6">
