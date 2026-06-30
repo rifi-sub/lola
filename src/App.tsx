@@ -1,6 +1,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ToxicExperienceSection } from './components/ToxicExperienceSection';
+import { PresencialSection } from './components/PresencialSection';
 import { TributesSection } from './components/TributesSection';
 import { StoriesSection } from './components/StoriesSection';
 import { MediaGallery } from './components/MediaGallery';
@@ -10,36 +11,34 @@ import { Footer } from './components/Footer';
 import lolaDataRaw from './data/lola_profile.json';
 import type { LolaProfileData } from './types/lola';
 
-
-// Cast the raw imported JSON data to our TS Interface
 const lolaData = lolaDataRaw as LolaProfileData;
 
 function App() {
   return (
     <div className="relative min-h-screen bg-void text-white antialiased selection:bg-neon-pink selection:text-white overflow-x-hidden">
-      
-      {/* Editorial Navigation */}
+
       <Navbar data={lolaData} />
 
-      {/* Main Content Sections */}
       <main>
-        {/* Hero Section */}
+        {/* Hero — Lola Haze, chat simulator, real description */}
         <Hero data={lolaData} />
 
-        {/* Toxic Girlfriend Experience Section */}
+        {/* Toxic GFE — Dinámicas, TGE, Terapias, Blackmail */}
         <ToxicExperienceSection data={lolaData} />
 
-        {/* Tributes & Findom Section */}
+        {/* Presencial — Barcelona, cashmeets, sesiones, likes/dislikes */}
+        <PresencialSection />
+
+        {/* Tributos — Drenómetro + Leaderboard */}
         <TributesSection data={lolaData} />
 
-        {/* Tweets / Stories Section */}
+        {/* Stories — Top tweets de @Lolahaze66 */}
         <StoriesSection data={lolaData} />
 
-        {/* Media & Portfolio Gallery */}
+        {/* Gallery — Fotos reales + vídeos cornudo */}
         <MediaGallery data={lolaData} />
       </main>
 
-      {/* Footer */}
       <Footer data={lolaData} />
     </div>
   );

@@ -22,9 +22,8 @@ const PaymentMethod: React.FC<{ icon: string; name: string; detail: string; glow
   </div>
 );
 
-export const TributesSection: React.FC<{ data: LolaProfileData }> = ({ data }) => {
-  const telegramUrl = "https://t.me/+z0m5TkR0vCExNDU0";
-  const kinks = data.content_summary.fetishes_and_kinks;
+export const TributesSection: React.FC<{ data: LolaProfileData }> = (_props) => {
+  const telegramUrl = "https://t.me/+kGMlimodG3k1ZmFk";
 
   const drainRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(drainRef, { once: true, margin: '-100px' });
@@ -155,14 +154,6 @@ export const TributesSection: React.FC<{ data: LolaProfileData }> = ({ data }) =
               ))}
             </div>
 
-            {/* Kink tags */}
-            <div className="flex flex-wrap gap-2 mt-5">
-              {kinks.map(k => (
-                <span key={k} className="text-[9px] uppercase tracking-wider font-bold text-deep-red bg-deep-red/10 border border-deep-red/20 px-2 py-0.5 font-mono">
-                  {k}
-                </span>
-              ))}
-            </div>
           </motion.div>
 
           {/* RIGHT: LEADERBOARD */}

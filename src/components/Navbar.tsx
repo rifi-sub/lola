@@ -6,19 +6,19 @@ interface NavbarProps {
   data: LolaProfileData;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ data }) => {
+export const Navbar: React.FC<NavbarProps> = ({ data: _data }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const displayName = data.profile.display_name.toUpperCase().replace(' 💘', '');
+  const displayName = 'LOLA HAZE';
 
   const navLinks = [
-    { name: 'Toxic GFE', href: '#gfe' },
+    { name: 'Dinámicas', href: '#gfe' },
+    { name: 'Presencial', href: '#presencial' },
     { name: 'Tributos', href: '#tributos' },
-    { name: 'Historias', href: '#tweets' },
     { name: 'Galería', href: '#galeria' },
   ];
 
-  const telegramUrl = "https://t.me/+D91Mh70fnqczYjZk";
+  const telegramUrl = "https://t.me/+kGMlimodG3k1ZmFk";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);

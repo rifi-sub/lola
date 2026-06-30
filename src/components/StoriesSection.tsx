@@ -5,7 +5,7 @@ import type { LolaProfileData } from '../types/lola';
 export const StoriesSection: React.FC<{ data: LolaProfileData }> = ({ data }) => {
   const { profile, tweets } = data;
 
-  // Get the top 2 tweets with the highest engagement from relevant categories
+  // Get the top 2 tweets with the highest engagement
   const filteredTweets = [...tweets]
     .filter(t =>
       t.topics_tags.includes('findom') ||
@@ -16,6 +16,8 @@ export const StoriesSection: React.FC<{ data: LolaProfileData }> = ({ data }) =>
     )
     .sort((a, b) => b.metrics.like_count - a.metrics.like_count)
     .slice(0, 2);
+
+  const X_URL = 'https://x.com/Lolahaze66';
 
   const formatDate = (dateStr: string) => {
     try {
@@ -52,11 +54,11 @@ export const StoriesSection: React.FC<{ data: LolaProfileData }> = ({ data }) =>
           <div className="h-px bg-gradient-to-r from-neon-pink/50 to-transparent w-32 mt-8 mb-6" />
           <p className="text-xs text-white-muted leading-relaxed max-w-xs">
             Extractos reales de su cuenta de X{' '}
-            <a href="https://x.com/gifts4lola66" target="_blank" rel="noopener noreferrer"
+            <a href={X_URL} target="_blank" rel="noopener noreferrer"
               className="text-neon-pink hover:underline">
-              @gifts4lola66
+              @Lolahaze66
             </a>
-            . Sin filtros, sin disculpas. Entiende el juego antes de jugar.
+            . Sin filtros, sin disculpas.
           </p>
 
           {/* Social stats */}
@@ -99,16 +101,8 @@ export const StoriesSection: React.FC<{ data: LolaProfileData }> = ({ data }) =>
               </blockquote>
 
               <div className="space-y-4 pt-4 border-t border-void-border">
-                {/* Tags */}
+                {/* Dominance signal only, no hashtags */}
                 <div className="flex flex-wrap gap-2">
-                  {tweet.topics_tags.map(tag => (
-                    <span
-                      key={tag}
-                      className="text-[9px] uppercase tracking-wider font-bold font-mono bg-neon-pink/10 text-neon-pink border border-neon-pink/20 px-2.5 py-1"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
                   {tweet.dominance_signal && (
                     <span className="text-[9px] uppercase tracking-wider font-bold font-mono bg-white-ghost text-white-dim border border-white/10 px-2.5 py-1">
                       ⚡ {tweet.dominance_signal}
