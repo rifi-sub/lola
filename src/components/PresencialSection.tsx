@@ -51,15 +51,16 @@ export const PresencialSection: React.FC = () => {
               </span>
             </h2>
             <p className="max-w-md text-white-muted font-light text-base leading-relaxed border-l-2 border-deep-red/30 pl-6">
-              En presencial solo hago sesiones de compras y cashmeets en sitios discretos pero públicos.
+              Presencial en Barcelona: cashmeets, sesiones y salidas de compras.
+              Siempre en sitios discretos pero <strong className="text-white">públicos</strong>.
               No me meto en habitaciones de hotel con desconocidos.
               <span className="block mt-2 text-white-dim font-semibold">Reserva obligatoria: 40€</span>
             </p>
           </div>
         </div>
 
-        {/* Main grid: Cashmeets + Sesiones */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {/* Main grid: 3 modalities */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
 
           {/* CASHMEETS */}
           <motion.div
@@ -76,10 +77,10 @@ export const PresencialSection: React.FC = () => {
                 <p className="text-[10px] font-mono text-white-muted uppercase tracking-widest">Encuentro rápido</p>
               </div>
             </div>
-            <ul className="space-y-3 mb-6">
+            <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm text-white-dim">
                 <span className="text-neon-pink mt-0.5 flex-shrink-0">·</span>
-                <span>En la calle</span>
+                <span>En la calle, sitio público</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-white-dim">
                 <span className="text-neon-pink mt-0.5 flex-shrink-0">·</span>
@@ -107,7 +108,11 @@ export const PresencialSection: React.FC = () => {
                 <p className="text-[10px] font-mono text-white-muted uppercase tracking-widest">Sesión completa</p>
               </div>
             </div>
-            <ul className="space-y-3 mb-6">
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-sm text-white-dim">
+                <span className="text-deep-red mt-0.5 flex-shrink-0">·</span>
+                <span>Siempre en sitio <strong className="text-white">público</strong></span>
+              </li>
               <li className="flex items-start gap-3 text-sm text-white-dim">
                 <span className="text-deep-red mt-0.5 flex-shrink-0">·</span>
                 <span>Duración máxima: <strong className="text-white">1 hora</strong></span>
@@ -119,6 +124,41 @@ export const PresencialSection: React.FC = () => {
               <li className="flex items-start gap-3 text-sm text-white-dim">
                 <span className="text-deep-red mt-0.5 flex-shrink-0">·</span>
                 <span>No realizo prácticas explícitas</span>
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* SESIONES DE COMPRAS */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="glass border border-white/10 rounded-2xl p-8"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <span className="text-2xl">🛍️</span>
+              <div>
+                <h3 className="text-2xl font-display font-bold text-white">Compras & Salidas</h3>
+                <p className="text-[10px] font-mono text-white-muted uppercase tracking-widest">Consultar precio</p>
+              </div>
+            </div>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-sm text-white-dim">
+                <span className="text-white-muted mt-0.5 flex-shrink-0">·</span>
+                <span>Sesiones de compras</span>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-white-dim">
+                <span className="text-white-muted mt-0.5 flex-shrink-0">·</span>
+                <span>Salidas a comer</span>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-white-dim">
+                <span className="text-white-muted mt-0.5 flex-shrink-0">·</span>
+                <span>Otras experiencias</span>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-white-dim">
+                <span className="text-white-muted mt-0.5 flex-shrink-0">·</span>
+                <span className="text-white-muted italic">Precio a consultar por privado</span>
               </li>
             </ul>
           </motion.div>
@@ -187,7 +227,7 @@ export const PresencialSection: React.FC = () => {
             Reserva obligatoria · 40€ · Barcelona
           </p>
           <a
-            href={TELEGRAM_URL}
+            href="https://t.me/gifts4lola66"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-neon-pink text-white px-14 py-5 text-[11px] uppercase kerning-wide font-black hover:bg-deep-red transition-all duration-300 hover-brat-glow"

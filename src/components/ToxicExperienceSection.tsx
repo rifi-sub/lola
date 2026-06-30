@@ -11,6 +11,7 @@ const SERVICES = [
     title: 'Terapias',
     desc: 'Sesiones de terapia para enfermos como tú. Shaming de adicciones, control mental y dependencia emocional administrada con precisión. Una sesión conmigo y empezamos a cortarlo.',
     ctaText: 'Iniciar Sesión',
+    ctaUrl: 'https://t.me/+z0m5TkR0vCExNDU0',
   },
   {
     num: '02',
@@ -18,6 +19,7 @@ const SERVICES = [
     title: 'Toxic Girlfriend Experience',
     desc: 'Relaciones tóxicas, infidelidades simuladas, celos, drama y caos consentido. Fotos, audios y mensajes diseñados para desestabilizarte y mantenerte exactamente donde quiero.',
     ctaText: 'Saber Más',
+    ctaUrl: 'https://t.me/+D91Mh70fnqczYjZk',
   },
   {
     num: '03',
@@ -25,6 +27,7 @@ const SERVICES = [
     title: 'Blackmail',
     desc: 'Para los que necesitan algo más que promesas. Blackmail consensuado y dinámicas de poder que van más allá de lo que te atreves a admitir. Sin vuelta atrás.',
     ctaText: 'Preguntar',
+    ctaUrl: 'https://t.me/+PtcWy1e0iKZlNGY0',
   },
 ];
 
@@ -88,7 +91,7 @@ export const ToxicExperienceSection: React.FC<{ data: LolaProfileData }> = (_pro
                 {svc.desc}
               </p>
               <a
-                href={TELEGRAM_URL}
+                href={svc.ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block border-b border-neon-pink/30 pb-1 text-[10px] uppercase kerning-wide font-black tracking-widest text-neon-pink hover:border-neon-pink transition-all duration-300"
