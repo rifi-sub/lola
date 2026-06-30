@@ -16,7 +16,7 @@ const lolaData = lolaDataRaw as LolaProfileData;
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-white text-brand-black antialiased selection:bg-brand-pink-dark selection:text-white overflow-x-hidden">
+    <div className="relative min-h-screen bg-void text-white antialiased selection:bg-neon-pink selection:text-white overflow-x-hidden">
       
       {/* Editorial Navigation */}
       <Navbar data={lolaData} />

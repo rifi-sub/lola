@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { LolaProfileData } from '../types/lola';
 
@@ -8,7 +8,8 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const displayName = data.profile.display_name.toUpperCase();
+  const [scrolled, setScrolled] = useState(false);
+  const displayName = data.profile.display_name.toUpperCase().replace(' 💘', '');
 
   const navLinks = [
     { name: 'Toxic GFE', href: '#gfe' },
@@ -19,24 +20,40 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
 
   const telegramUrl = "https://t.me/+D91Mh70fnqczYjZk";
 
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-brand-black/5">
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? 'bg-void/90 backdrop-blur-xl border-b border-void-border'
+          : 'bg-transparent border-b border-transparent'
+      }`}
+    >
       <div className="flex justify-between items-center w-full px-6 md:px-12 max-w-[1600px] mx-auto h-20 md:h-24">
         {/* Logo */}
-        <a href="#inicio" className="text-xl md:text-2xl font-display font-black tracking-tighter hover:text-brand-pink-dark transition-colors duration-300">
-          {displayName}
+        <a href="#inicio" className="relative group">
+          <span className="text-xl md:text-2xl font-display font-black tracking-tighter text-white transition-colors duration-300 group-hover:text-neon-pink">
+            {displayName}
+          </span>
+          <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-neon-pink group-hover:w-full transition-all duration-500" />
+          <span className="text-neon-pink ml-1">💘</span>
         </a>
-
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-12">
           {navLinks.map((link) => (
             <a
               key={link.name}
-              className="text-[11px] uppercase kerning-wide font-bold text-brand-black/60 hover:text-brand-black border-b border-transparent hover:border-brand-black transition-all duration-300 py-1"
+              className="relative text-[11px] uppercase kerning-wide font-bold text-white-muted hover:text-neon-pink transition-colors duration-300 py-1 group"
               href={link.href}
             >
               {link.name}
+              <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-neon-pink group-hover:w-full transition-all duration-500" />
             </a>
           ))}
         </nav>
@@ -47,19 +64,19 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
             href={telegramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block border border-brand-black px-8 py-3 text-[10px] uppercase kerning-wide font-bold hover:bg-brand-black hover:text-white transition-all duration-500 hover:scale-105"
+            className="inline-block relative px-8 py-3 text-[10px] uppercase kerning-wide font-bold text-white border border-neon-pink/50 hover:border-neon-pink hover:bg-neon-pink/10 transition-all duration-300 hover-brat-glow"
           >
-            Entrar al Caos
+            <span className="relative z-10">Entrar al Caos</span>
           </a>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 text-brand-black focus:outline-none"
+          className="lg:hidden p-2 text-white focus:outline-none"
           aria-label="Toggle menu"
         >
-          <span className="material-symbols-outlined !text-2xl">
+          <span className="material-symbols-outlined !text-2xl text-neon-pink">
             {isOpen ? 'close' : 'menu'}
           </span>
         </button>
@@ -73,7 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden w-full bg-white border-b border-brand-black/5 overflow-hidden"
+            className="lg:hidden w-full bg-void-mid/95 backdrop-blur-xl border-b border-void-border overflow-hidden"
           >
             <div className="flex flex-col px-6 py-8 gap-6">
               {navLinks.map((link) => (
@@ -81,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-sm uppercase tracking-wider font-semibold text-brand-black/80 hover:text-brand-pink-dark transition-colors py-2 border-b border-brand-black/5"
+                  className="text-sm uppercase tracking-wider font-semibold text-white-dim hover:text-neon-pink transition-colors py-2 border-b border-void-border"
                 >
                   {link.name}
                 </a>
@@ -91,9 +108,9 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="w-full text-center border border-brand-black bg-brand-black text-white py-4 text-xs uppercase kerning-wide font-bold hover:bg-brand-pink-dark hover:border-brand-pink-dark transition-all duration-300"
+                className="w-full text-center border border-neon-pink bg-neon-pink/10 text-white py-4 text-xs uppercase kerning-wide font-bold hover:bg-neon-pink transition-all duration-300"
               >
-                Telegram Principal
+                Telegram → Entrar al Caos
               </a>
             </div>
           </motion.div>
