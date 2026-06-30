@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const TELEGRAM_URL = "https://t.me/+kGMlimodG3k1ZmFk";
+
 
 const LIKES = [
   'Ballbusting',
