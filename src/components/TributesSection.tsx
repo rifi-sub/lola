@@ -252,9 +252,8 @@ export const TributesSection: React.FC<{ data: LolaProfileData }> = (_props) => 
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-white-muted mb-8 text-center">
             // MÉTODOS_DE_PAGO
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
             <PaymentMethod icon="📱" name="Bizum" detail="Número privado vía Telegram" glow />
-            <PaymentMethod icon="💳" name="PayPal" detail="paypal.me/diosalola (amigos)" />
             <PaymentMethod icon="🎁" name="Amazon Wishlist" detail="Sorpréndeme con un capricho" />
           </div>
         </div>
