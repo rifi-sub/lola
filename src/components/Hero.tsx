@@ -210,7 +210,7 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
             <div className="flex items-center gap-3 px-4 py-3 border-b border-void-border bg-void-surface">
               <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-neon-pink/40">
                 <img
-                  src="/lola_beach.jpg"
+                  src="/photo_2026-06-30_20-24-07.jpg"
                   alt="Lola Haze"
                   className="w-full h-full object-cover"
                   onError={(e) => {

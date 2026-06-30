@@ -4,30 +4,30 @@ import type { LolaProfileData } from '../types/lola';
 
 const TELEGRAM_URL = "https://t.me/+kGMlimodG3k1ZmFk";
 
-// Real photos from /public
+// Real photos from /public — the photo_2026-06-30_*.jpg files
 const GALLERY_PHOTOS = [
   {
-    src: '/lola_beach.jpg',
+    src: '/photo_2026-06-30_20-24-07.jpg',
     caption: 'Lola Haze · Barcelona',
     type: 'photo',
   },
   {
-    src: '/lola_feet_football.jpg',
-    caption: 'Adoración · Holi 👣',
-    type: 'photo',
-  },
-  {
-    src: '/lola_mirror.jpg',
+    src: '/photo_2026-06-30_20-23-52.jpg',
     caption: 'Out of reach',
     type: 'photo',
   },
   {
-    src: '/lola_feet_black.jpg',
-    caption: 'Trampling & Feet',
+    src: '/photo_2026-06-30_20-23-55.jpg',
+    caption: 'Adoración · Trampling · Feet',
     type: 'photo',
   },
   {
-    src: '/lola_concert.jpg',
+    src: '/photo_2026-06-30_20-24-13.jpg',
+    caption: 'Holi 👣',
+    type: 'photo',
+  },
+  {
+    src: '/photo_2026-06-30_20-23-54.jpg',
     caption: 'Lola tiene vida. Tú pagas por entrar en ella.',
     type: 'photo',
   },
@@ -35,9 +35,9 @@ const GALLERY_PHOTOS = [
 
 // Cornudo section videos
 const CORNUDO_VIDEOS = [
-  { src: '/IMG_8207.MP4', poster: '/lola_feet_black.jpg' },
-  { src: '/IMG_8210.MP4', poster: '/lola_beach.jpg' },
-  { src: '/IMG_8611.MP4', poster: '/lola_mirror.jpg' },
+  { src: '/IMG_8207.MP4', poster: '/photo_2026-06-30_20-23-55.jpg' },
+  { src: '/IMG_8210.MP4', poster: '/photo_2026-06-30_20-24-07.jpg' },
+  { src: '/IMG_8611.MP4', poster: '/photo_2026-06-30_20-23-54.jpg' },
 ];
 
 export const MediaGallery: React.FC<{ data: LolaProfileData }> = ({ data: _data }) => {
@@ -61,7 +61,7 @@ export const MediaGallery: React.FC<{ data: LolaProfileData }> = ({ data: _data 
             <div className="relative group overflow-hidden border border-void-border">
               <img
                 className="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                src="/lola_beach.jpg"
+                src="/photo_2026-06-30_20-24-07.jpg"
                 alt="Lola Haze"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-void/60 via-transparent to-transparent pointer-events-none" />
