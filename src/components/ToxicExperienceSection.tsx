@@ -59,14 +59,6 @@ export const ToxicExperienceSection: React.FC<{ data: LolaProfileData }> = (_pro
               <span className="italic text-neon-pink glow-pink font-normal">& Control.</span>
             </h2>
           </div>
-          <div className="max-w-sm border-l-2 border-neon-pink/30 pl-6">
-            <p className="text-white-muted font-light text-sm md:text-base leading-relaxed">
-              "¿Quieres una novia perfecta? Entonces esto no es para ti."
-            </p>
-            <p className="text-white-dim text-sm mt-2 leading-relaxed">
-              Fotos, audios, celos, control y puro desorden consentido. Sin filtros, sin excusas.
-            </p>
-          </div>
         </div>
 
         {/* Services Grid */}
